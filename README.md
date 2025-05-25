@@ -1,47 +1,112 @@
 # 🎯 PuissanceX
 
-**PuissanceX** is a modern and scalable version of the classic **Connect 4** game, developed in Java with a clean **MVC** architecture powered by the **Boardifier** framework.  
-The game is playable in the **console** and designed to support a future **JavaFX graphical interface**.
+**PuissanceX** est une version moderne et évolutive du célèbre jeu **Puissance 4**, développée en Java avec une architecture **MVC** propre et propulsée par le framework **Boardifier**.
+Le jeu est jouable en **console** et est conçu pour accueillir une future interface **graphique JavaFX**.
 
 ---
 
-## 🚀 Features
+## 🚀 Fonctionnalités
 
-* 🎮 **Multiple game modes**:
-  - Human vs Human  
-  - Human vs AI (Minimax or Deep Learning)  
-  - AI vs AI
+* 🎮 **Modes de jeu variés** :
 
-* 🧹 **Advanced configuration**:
-  - Customizable number of **rows** and **columns**  
-  - **Win condition** (e.g., align 4)  
-  - Game mode  
-  - **AI difficulty** level
+  * Humain vs Humain
+  * Humain vs IA (Minimax ou Deep Learning)
+  * IA vs IA
 
-* 🤖 **Integrated Artificial Intelligence**:
-  - **Minimax** algorithm with custom heuristics  
-  - Upcoming integration of **Deep Learning** via **Deeplearning4j**
+* 🧹 **Paramétrage avancé** :
 
-* 🧱 **Modular MVC architecture**:
-  - Clear separation between **model**, **view**, and **controller**  
-  - Easily extensible for future variants or interfaces
+  * Nombre de **lignes**, **colonnes**
+  * Condition de **victoire**
+  * Mode de jeu
+  * **Niveau de difficulté** de l'IA
 
-* ✅ **Unit testing**:
-  - Core components covered with **JUnit 5**
+* 🤖 **Intelligence Artificielle intégrée** :
+
+  * Algorithme **Minimax** avec heuristiques personnalisées
+  * Intégration à venir de **Deep Learning** via **Deeplearning4j**
+
+* 🧱 **Architecture modulaire (MVC)** :
+
+  * Séparation claire entre **modèle**, **vue** et **contrôleur**
+  * Extensible pour de futures variantes ou interfaces
+
+* ✅ **Tests unitaires** :
+
+  * Couverture des composants critiques avec **JUnit 5**
 
 ---
 
-## 💠 Requirements
+## 💠 Prérequis
 
-- **Java 17** or higher  
-- **Maven 3.6+**  
-- (Optional) A Java IDE (🔧 **IntelliJ IDEA recommended**)
+* **Java 17** ou supérieur
+* **Maven 3.6+**
+* (Optionnel) Un IDE Java (🔧 **IntelliJ IDEA recommandé**)
 
 ---
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/your-username/puissancex.git
+git clone https://github.com/votre-utilisateur/puissancex.git
 cd puissancex
 mvn clean install
+```
+
+---
+
+## ▶️ Lancement du jeu
+
+### 🔹 Depuis la console
+
+```bash
+mvn exec:java
+```
+
+Avec des **paramètres personnalisés** :
+
+```bash
+mvn exec:java -Dexec.args="4 6 7 1"
+```
+
+* `4` → Condition de victoire (ex: aligner 4)
+* `6` → Nombre de lignes
+* `7` → Nombre de colonnes
+* `1` → Mode de jeu :
+
+  * `0` : Humain vs Humain
+  * `1` : Humain vs IA
+  * `2` : IA vs IA
+
+### 🔹 Depuis un IDE
+
+1. Ouvrez le projet dans **IntelliJ IDEA**
+2. Lancez la classe **`PuissanceXConsole`** comme classe principale
+
+---
+
+## 🧱 Structure du projet
+
+```
+src/
+├── main/
+│   ├── java/
+│   │   ├── model/         ← Logique du jeu, état des parties
+│   │   ├── view/          ← Vue console (et future JavaFX)
+│   │   └── control/       ← Contrôleurs MVC, interactions
+│   │       └── ai/        ← IA Minimax & IA Deep Learning (WIP)
+└── test/
+    └── java/              ← Tests unitaires (JUnit 5)
+```
+
+---
+
+## 🔧 Technologies utilisées
+
+* ☕ Java 17
+* 🧰 Maven
+* 🧌 Boardifier (framework MVC)
+* 🎨 JavaFX (à venir)
+* 🧠 Deeplearning4j (IA avancée, à venir)
+* 🧪 JUnit 5
+
+---
